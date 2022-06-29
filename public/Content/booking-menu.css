@@ -1,0 +1,190 @@
+#menu-booking {
+    background: rgba(255, 255, 255, 0.4);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#menu-booking .navbar-nav {
+    float: none;
+}
+
+#menu-booking .nav>li {
+    width: auto;
+}
+
+#body-menu-booking #wrap {
+    height: auto;
+}
+
+#menu-booking .navbar-brand {
+    height: auto;
+}
+
+#menu-booking ul.navbar-nav li {
+    position: relative;
+}
+
+#menu-booking ul.navbar-nav li a:hover {
+    background: #2E3192;
+    color: #fff;
+}
+
+#menu-booking ul.navbar-nav li:hover ul.sub-menu-booking {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    z-index: 999;
+}
+
+#menu-booking ul.nav ul.sub-menu-booking {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    top: 150%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#menu-booking ul.nav ul.sub-menu-booking li {
+    list-style: none;
+    min-width: 100%;
+}
+
+#menu-booking ul.nav ul.sub-menu-booking li a {
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+#menu-booking .supporter-title, #menu-booking .supporter-body li.li-supporter-children {
+    margin-right: 0;
+}
+
+#menu-booking .lang-menu-booking {
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    z-index: 9999;
+    border: 1px solid #2E3192;
+}
+
+.menu-booking-lang {
+    border: 1px solid #2E3192;
+    background: #fff;
+}
+
+@media(min-width:768px) {
+    #menu-booking .navbar-nav {
+        margin-top: 55px;
+    }
+}
+
+@media(min-width:992px) {}
+
+@media(min-width:1200px) {
+    .menu-booking-lang {}
+    #menu-booking .menu-booking-logo {
+        width: 180px;
+    }
+    #menu-booking .navbar-inverse .navbar-nav>li>a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media(min-width:992px) and (max-width:1200px) {
+    #menu-booking .navbar-inverse .navbar-nav>li>a {
+        padding: 10px;
+    }
+    #menu-booking .menu-booking-logo {
+        width: 100px;
+        padding-top: 15px;
+    }
+    #body-menu-booking .container {
+        width: 970px;
+    }
+    #menu-booking .navbar-inverse .navbar-nav>li>a {
+        font-size: 13px;
+    }
+    #menu-booking .navbar-nav {
+        margin-top: 40px;
+    }
+    #menu-booking .supporter-title.btn-title-lang {
+        padding: 5px 10px;
+    }
+    #menu-booking .lang-menu-booking {
+        top: 42px;
+    }
+}
+
+@media(min-width:768px) and (max-width:992px) {
+    #menu-booking .menu-booking-logo {
+        width: 100px;
+    }
+    #menu-booking ul.navbar-nav {
+        margin-top: 36px;
+    }
+    #body-menu-booking .container {
+        width: 750px;
+    }
+    #menu-booking {
+        padding-bottom: 0;
+    }
+    #menu-booking .supporter-title.btn-title-lang {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    #menu-booking .navbar-inverse .navbar-nav>li>a {
+        padding: 5px 10px;
+    }
+    #menu-booking .lang-menu-booking {
+        top: 35px;
+    }
+}
+
+@media(max-width:768px) {
+    #menu-booking .menu-booking-logo {
+        width: 200px;
+    }
+    #menu-booking .navbar-header {
+        position: relative;
+    }
+    #menu-booking button.navbar-toggle {
+        position: absolute;
+        right: 15px;
+        bottom: 0px;
+    }
+    #menu-booking ul.nav {
+        margin-top: 0 !important;
+    }
+    #menu-booking ul.navbar-nav li ul.sub-menu-booking li a {
+        text-align: center;
+    }
+    #menu-booking ul.navbar-nav li:hover ul.sub-menu-booking {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        z-index: 999;
+        position: relative;
+    }
+    #menu-booking .lang-menu-booking {
+        top: 15px;
+    }
+    #menu-booking .supporter-title.btn-title-lang {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    #menu-booking .navbar.navbar-inverse {
+        margin-bottom: 0px;
+    }
+    #menu-booking .navbar-nav{
+        float: none;
+    }
+    #menu-booking ul.supporter-body{
+        left: auto;
+        right: 0;
+    }
+}
