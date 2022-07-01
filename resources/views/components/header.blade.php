@@ -56,6 +56,10 @@ Poseidon Suite                                                </a>
                                                 <a href="/room/family-executive{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">
 FAMILY EXECUTIVE                                                </a>
                                         </li>
+                                        @foreach($rows as $row)
+                                            <li><a href="/room/{{$row->slug}}{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">{{$row->title}}</a></li>
+                                        @endforeach
+            
                                 </ul>
 
                             </li>
