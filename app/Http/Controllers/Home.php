@@ -2,17 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Introduce;
+use App\Models\Room;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
 class Home extends Controller
 {
-
     public function index()
     {
         return view('../pages/index');
     }
-
+    public function gotogt(Request $request)
+    {
+        $id = 1;
+        $rows= Introduce::find($id);
+        App::setLocale($request->lang);
+        session()->put('locale', $request->lang);
+        return view('pages.poseidon-experience.gt', compact('rows'));
+    }
+    public function gotovt(Request $request)
+    {
+        $id = 2;
+        $rows= Introduce::find($id);
+        App::setLocale($request->lang);
+        session()->put('locale', $request->lang);
+        return view('pages.poseidon-experience.vt', compact('rows'));
+    }
+    public function GotoRoom(Request $request,$slug)
+    {
+        $id = Room::where('id', $slug)
+        ->orWhere('slug', $slug)
+        ->firstOrFail();
+        $rows= Room::find($id->id);
+        App::setLocale($request->lang);
+        session()->put('locale', $request->lang);
+        return view('pages.room.room', compact('rows'));
+    }
+    
     public function contact(Request $request)
     {
         App::setLocale($request->lang);

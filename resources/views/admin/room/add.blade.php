@@ -40,7 +40,7 @@
                             </ul>
                         @endif
 
-                        <form method="POST" action="{{ route('room.add') }}" class=""
+                        <form method="POST" action="{{ route('service.add') }}" class=""
                             enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="row p-t-20">
@@ -246,7 +246,7 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="formFile" class="form-label">Default file input example</label>
+                                <label for="formFile" class="form-label">Chọn hình (Có thể chọn nhiều hình)</label>
                                 <input type="file" class="form-control" name="photo[]" multiple>
                             </div>
                             <button type="submit" class="btn btn-success m-t-20">

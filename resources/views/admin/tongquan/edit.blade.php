@@ -45,32 +45,44 @@
                             {{csrf_field()}}
                             <div class="form-group">
                                 <input type="text" value="{{$rows->title }}" name="title" hidden>
-                                <label for="basic-url" class="form-label">Your vanity URL</label>
-                                <textarea class="form-control" name="content_vi" required>{{ $rows->content_vi }}</textarea>
+                                <label for="basic-url" class="form-label">Nhập thông tin tiếng Việt</label>
+                                <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm"
+                                            name="content_vi">{{ $rows->content_vi }}<                    
+                                        </textarea>
                             </div>
                             <div class="form-group">
-                                <label for="basic-url" class="form-label">Your vanity URL</label>
-                                <textarea class="form-control" name="content_en">{{ $rows->content_en }}</textarea>
+                                <label for="basic-url" class="form-label">Nhập thông tin tiếng Anh</label>
+                                <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm"
+                                            name="content_en">{{ $rows->content_en }}<                    
+                                        </textarea>
                             </div>
                             <div class="form-group">
-                                <label for="basic-url" class="form-label">Your vanity URL</label>
-                                <textarea class="form-control" name="content_ru">{{ $rows->content_ru }}</textarea>
+                                <label for="basic-url" class="form-label">Nhập thông tin tiếng Nga</label>
+                                <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm"
+                                            name="content_ru">{{ $rows->content_ru }}<                    
+                                        </textarea>
                             </div>
                             <div class="form-group">
-                                <label for="basic-url" class="form-label">Your vanity URL</label>
-                                <textarea class="form-control" name="content_kr">{{ $rows->content_kr }}</textarea>
+                                <label for="basic-url" class="form-label">Nhập thông tin tiếng Nhật</label>
+                                <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm"
+                                            name="content_jp">{{ $rows->content_jp }}<                    
+                                        </textarea>
                             </div>
                             <div class="form-group">
-                                <label for="basic-url" class="form-label">Your vanity URL</label>
-                                <textarea class="form-control" name="content_cn">{{ $rows->content_cn }}</textarea>
+                                <label for="basic-url" class="form-label">Nhập thông tin tiếng Trung</label>
+                                <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm"
+                                            name="content_cn">{{ $rows->content_cn }}<                    
+                                        </textarea>
                             </div>
                             <div class="form-group">
-                                <label for="basic-url" class="form-label">Your vanity URL</label>
-                                <textarea class="form-control" name="content_jp">{{ $rows->content_jp }}</textarea>
+                                <label for="basic-url" class="form-label">Nhập thông tin tiếng Hàn</label>
+                                <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm"
+                                            name="content_kr">{{ $rows->content_kr }}<                    
+                                        </textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="formFile" class="form-label">Default file input example</label>
-                                {{-- <input class="form-control"  type="file" name="photo" data-default-file="{{ $rows->photo }}"> --}}
+                                <label for="formFile" class="form-label">Chọn hình</label>
+                           
                                 <input type="file" class="form-control" name="photo" data-default-file="{{ $rows->photo }}">
                               </div>
                             <button type="submit" class="btn btn-success m-t-20">
@@ -87,5 +99,10 @@
         <!-- ============================================================== -->
         <!-- End PAge Content -->
         <!-- ============================================================== -->
-    </div>
+    </div>    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.ckeditor').ckeditor();
+        });
+    </script>
 @endsection

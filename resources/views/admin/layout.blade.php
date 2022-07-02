@@ -142,16 +142,14 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i
-                                    class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
-                        </li>
+
                         <li> <a class="waves-effect waves-dark" href="/admin/tong-quan" aria-expanded="false"><i
                                     class="fa fa-user-circle-o"></i><span class="hide-menu">Tổng quan</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="/admin/room" aria-expanded="false"><i
                                     class="fa fa-table"></i><span class="hide-menu">Loại Phòng</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="icon-fontawesome.html" aria-expanded="false"><i
+                        <li> <a class="waves-effect waves-dark" href="/admin/service" aria-expanded="false"><i
                                     class="fa fa-smile-o"></i><span class="hide-menu">Dịch Vụ</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i
@@ -160,14 +158,9 @@
                         <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i
                                     class="fa fa-bookmark-o"></i><span class="hide-menu">Khám phá</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i
-                                    class="fa fa-question-circle"></i><span class="hide-menu">404</span></a>
-                        </li>
+                     
                     </ul>
-                    <div class="text-center mt-4">
-                        <a href="https://www.wrappixel.com/templates/adminwrap/"
-                            class="btn waves-effect waves-light btn-info hidden-md-down text-white"> Upgrade to Pro</a>
-                    </div>
+                
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>

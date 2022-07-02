@@ -32,31 +32,8 @@
                                 <a>{{ __('messages.ACCOMMODATION') }}</a>
 
                                 <ul class="nav-child">
-                                            <li>
-                                                <a href="/room/superior-room{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">
-Superior room                                                </a>
-                                        </li>
-                                            <li>
-                                                <a href="/room/premier-cityview{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">
-PREMIER CITYVIEW                                                 </a>
-                                        </li>
-                                            <li>
-                                                <a href="/room/deluxe-cityview-with-balcony{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">
-DELUXE CITYVIEW WITH BALCONY                                                 </a>
-                                        </li>
-                                            <li>
-                                                <a href="/room/luxury-Cityview{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">
-Luxury Cityview                                                </a>
-                                        </li>
-                                            <li>
-                                                <a href="/room/poseidon-suite{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">
-Poseidon Suite                                                </a>
-                                        </li>
-                                            <li>
-                                                <a href="/room/family-executive{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">
-FAMILY EXECUTIVE                                                </a>
-                                        </li>
-                                        @foreach($rows as $row)
+                                           
+                                        @foreach($menu as $row)
                                             <li><a href="/room/{{$row->slug}}{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">{{$row->title}}</a></li>
                                         @endforeach
             

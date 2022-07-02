@@ -28,7 +28,9 @@ use App\Http\Controllers\RegistrationController;
 Route::get('/', [ContactController::class, 'contactForm'])->name('page.index');
 Route::get('/', [Home::class, 'lang_change'])->name('LangChange');
 
-
+Route::get('/room/{slug}', [Home::class, 'GotoRoom']);
+Route::get('/poseidon-experience/about-us', [Home::class, 'gotogt']);
+Route::get('/poseidon-experience/location', [Home::class, 'gotovt']);
 Route::get('/room/deluxe-cityview-with-balcony', [Home::class, 'gotoRoomPage1'])->name('page.deluxe-cityview-with-balcony');
 Route::get('/room/family-executive', [Home::class, 'gotoRoomPage2'])->name('page.family-executive');
 Route::get('/room/luxury-Cityview', [Home::class, 'gotoRoomPage3'])->name('page.luxury-Cityview');
@@ -36,8 +38,6 @@ Route::get('/room/poseidon-suite', [Home::class, 'gotoRoomPage4'])->name('page.p
 Route::get('/room/premier-cityview', [Home::class, 'gotoRoomPage5'])->name('page.premier-cityview');
 Route::get('/room/superior-room', [Home::class, 'gotoRoomPage6'])->name('page.superior-room');
 
-Route::get('/poseidon-experience/about-us', [Home::class, 'gotoAboutUs'])->name('page.about-us');
-Route::get('/poseidon-experience/location', [Home::class, 'gotoLocation'])->name('page.location');
 
 Route::get('/poseidon-service/quay-dich-vu-van-phong', [Home::class, 'gotoDichVu1'])->name('page.quay-dich-vu-van-phong');
 Route::get('/poseidon-service/gym', [Home::class, 'gotoDichVu2'])->name('page.gym');
@@ -81,6 +81,12 @@ Route::group(['middleware' => ['auth'],'prefix' => 'admin'], function() {
     Route::post('room/add', [AdminController::class, 'storeroom'])->name('room.add');
     Route::get('room/edit/{id}', [AdminController::class, 'editroom']);
     Route::post('room/edit/{id}', [AdminController::class, 'updateroom'])->name('room.update');
+    Route::get('service', [AdminController::class, 'indexservice']);
+    Route::get('service/add', [AdminController::class, 'getaddservice']); 
+    Route::get('service/del/{id}', [AdminController::class, 'delservice']);
+    Route::post('service/add', [AdminController::class, 'storeservice'])->name('service.add');
+    Route::get('service/edit/{id}', [AdminController::class, 'editservice']);
+    Route::post('service/edit/{id}', [AdminController::class, 'updateservice'])->name('service.update');
  });
  Route::get('admin/login', [LoginController::class, 'showLoginForm'])->name('login');
  Route::post('admin/login', [LoginController::class, 'login']);

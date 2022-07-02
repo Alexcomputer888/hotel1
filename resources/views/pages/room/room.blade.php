@@ -89,25 +89,21 @@
                         </div>
                             <div class="col-sm-5 mb20">
                                 <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                        {{-- <li data-thumb="../Upload/_thumbs/images/Background/9.jpg">
-                                            <img src="../Upload/images/Background/9.jpg" class="img-responsive">
-                                        </li>
-                                        <li data-thumb="../Upload/_thumbs/images/Background/8.jpg">
-                                            <img src="../Upload/images/Background/8.jpg" class="img-responsive">
-                                        </li>
-                                        <li data-thumb="../Upload/_thumbs/images/Background/3.jpg">
-                                            <img src="../Upload/images/Background/3.jpg" class="img-responsive">
-                                        </li> --}}
-                                        <?php 
-                                        $photos = $rows->photo;
-                                        $photos_arrs = json_decode($photos);
-                                        foreach ($photos_arrs as $value)
-                                        {
-                                            // echo "<img src="127.0.0.1:8080/img/8.jpg" alt=''>";
-                                            echo ' <li data-thumb="'.asset('img/'. $value).'">
-                                            <img src="'.asset('img/'. $value).'" class="img-responsive">
-                                        </li>';
-                                        }
+                                       
+                                       <?php
+                                 $photos = $rows->photo;
+                                 $photos_arrs = json_decode($photos);
+                                 if ($photos_arrs == FALSE) {
+                                    echo ' <li data-thumb="'.asset('img/'. $photos).'">
+                                    <img src="'.asset('img/'. $photos).'" class="img-responsive">
+                                </li>';
+                                 } else {
+                                     foreach ($photos_arrs as $value) {
+                                        echo ' <li data-thumb="'.asset('img/'. $value).'">
+                                        <img src="'.asset('img/'. $value).'" class="img-responsive">
+                                    </li>';
+                                     }
+                                 }
                                  ?>
                                 </ul>
                             </div>
