@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use App\Models\Introduce;
 use App\Models\Room;
+use App\Models\Service;
 use Illuminate\View\Component;
 
 class Header extends Component
@@ -25,6 +26,6 @@ class Header extends Component
      */
     public function render()
     {
-        return view('components.header', ['menu' => Room::GetAll()]);
+        return view('components.header', ['dichvu' => Service::GetAll()], ['menu' => Room::GetAll()]);
     }
 }

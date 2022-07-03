@@ -28,6 +28,7 @@ use App\Http\Controllers\RegistrationController;
 Route::get('/', [ContactController::class, 'contactForm'])->name('page.index');
 Route::get('/', [Home::class, 'lang_change'])->name('LangChange');
 
+Route::get('/poseidon-service/{slug}', [Home::class, 'GotoService']);
 Route::get('/room/{slug}', [Home::class, 'GotoRoom']);
 Route::get('/poseidon-experience/about-us', [Home::class, 'gotogt']);
 Route::get('/poseidon-experience/location', [Home::class, 'gotovt']);

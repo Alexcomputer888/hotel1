@@ -13,11 +13,6 @@
                     <li class="breadcrumb-item active">Table Basic</li>
                 </ol>
             </div>
-            <div class="col-md-7 align-self-center">
-                <a href="https://www.wrappixel.com/templates/adminwrap/"
-                    class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down text-white"> Upgrade to
-                    Pro</a>
-            </div>
         </div>
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
@@ -39,190 +34,151 @@
                             @endforeach
                             </ul>
                         @endif
+                        <form method="POST" action="{{ route('service.update',$rows->id) }}" class="" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        <div class="row p-t-20">
+                            <div class="col-md-12">
+                                <h3 class="card-title">Tiêu đề</h3>
+                                <hr></div>
+                                <div class="form-group col-4">
+                                    <label class="control-label">Tiêu đề tiếng Việt</label>
+                                    <input type="text" class="form-control" name="title_vi" placeholder="Nhập tiêu đề tiếng Việt" value="{{$rows->title_vi}}">
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="form-group  col-4">
+                                    <label class="control-label">Tiêu đề tiếng Anh</label>
+                                    <input type="text" class="form-control" name="title_en" placeholder="Nhập tiêu đề tiếng Anh" value="{{$rows->title_en}}">
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="form-group  col-4">
+                                    <label class="control-label">Tiêu đề tiếng Nga</label>
+                                    <input type="text" class="form-control" name="title_ru" placeholder="Nhập tiêu đề tiếng Nga" value="{{$rows->title_ru}}">
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="form-group  col-4">
+                                    <label class="control-label">Tiêu đề tiếng Nhật</label>
+                                    <input type="text" class="form-control" name="title_jp" placeholder="Nhập tiêu đề tiếng Nhật" value="{{$rows->title_jp}}">
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="form-group  col-4">
+                                    <label class="control-label">Tiêu đề tiếng Trung</label>
+                                    <input type="text" class="form-control" name="title_cn" placeholder="Nhập tiêu đề tiếng Trung" value="{{$rows->title_cn}}">
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="form-group  col-4">
+                                    <label class="control-label">Tiêu đề tiếng Hàn</label>
+                                    <input type="text" class="form-control" name="title_kr" placeholder="Nhập tiêu đề tiếng Hàn" value="{{$rows->title_kr}}">
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="row">
+                            <h3 class="card-title">Nội dung</h3>
+                            <hr>
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label class="control-label">Nội dung tiếng Việt</label>
+                                    <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_vi">{{$rows->content_vi}}</textarea>
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label class="control-label">Nội dung tiếng Anh</label>
+                                    <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_en">{{$rows->content_en}}</textarea>
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label class="control-label">Nội dung tiếng Nga</label>
+                                    <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_ru">{{$rows->content_ru}}</textarea>
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <form method="POST" action="{{ route('room.update',$rows->id) }}" class="" enctype="multipart/form-data">
-                          {{-- <form method="POST" action="{{ route('room.update') }}" class="" enctype="multipart/form-data"> --}}
-                            {{ csrf_field() }}
-                            <div class="row p-t-20">
-                                <div class="col-md-12">
-                                    <h3 class="card-title">Tiêu đề</h3>
-                                    <hr>
-                                    <div class="form-group ">
-                                        <label class="control-label">Tiêu đề</label>
-                                        <input type="text" class="form-control ckeditor" name="title" placeholder="Nhập tiêu đề"
-                                            value="{{ $rows->title }}">
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label class="control-label">Nội dung tiếng Nhật</label>
+                                    <textarea style="height: 150px" type="text" class="ckeditor form-control" placeholder="Nhập Nội dung" name="content_jp">{{$rows->content_jp}}</textarea>
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <h3 class="card-title">Đặc điểm</h3>
-                                <hr>
-                                <div class="col-md-4">
-                                    <div class="form-group ">
-                                        <label class="control-label">Đặc điểm tiếng Việt</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm" name="detail_vi">
-                                        {{ $rows->detail_vi }}
-                                     </textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group ">
-                                        <label class="control-label">Đặc điểm tiếng Anh</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm" name="detail_en">
-                                          {{ $rows->detail_en }}
-                                        </textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group ">
-                                        <label class="control-label">Đặc điểm tiếng Nga</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm" name="detail_ru">
-                                          {{ $rows->detail_ru }}                     
-                                        </textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group ">
-                                      <label class="control-label">Đặc điểm tiếng Nhật</label>
-                                      <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm" name="detail_jp">
-                                        {{ $rows->detail_jp }}                                         
-                                              </textarea>
-                                      <div class="has-danger">
-                                          <small class="form-control-feedback ">
-                                              Không để trống.
-                                          </small>
-                                      </div>
-                                  </div>
-                              </div>
-                                
-                                <div class="col-md-4">
-                                    <div class="form-group ">
-                                        <label class="control-label">Đặc điểm tiếng Trung</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm" name="detail_cn">
-                                          {{ $rows->detail_cn }}
-                                            </textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group ">
-                                      <label class="control-label">Đặc điểm tiếng Hàn</label>
-                                      <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập đặc điểm" name="detail_kr">
-                                        {{ $rows->detail_kr }}
-                                          </textarea>
-                                      <div class="has-danger">
-                                          <small class="form-control-feedback ">
-                                              Không để trống.
-                                          </small>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                                <h3 class="card-title">Nội dung</h3>
-                                <hr>
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label class="control-label">Nội dung tiếng Việt</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_vi"> {{ $rows->content_vi }}  </textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label class="control-label">Nội dung tiếng Anh</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_en">{{ $rows->content_en }}</textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label class="control-label">Nội dung tiếng Nga</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_ru">{{ $rows->content_ru }}</textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="form-group ">
-                                      <label class="control-label">Nội dung tiếng Nhật</label>
-                                      <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_jp">{{ $rows->content_jp }}</textarea>
-                                      <div class="has-danger">
-                                          <small class="form-control-feedback ">
-                                              Không để trống.
-                                          </small>
-                                      </div>
-                                  </div>
-                              </div>
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label class="control-label">Nội dung tiếng Trung</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_cn">{{ $rows->content_cn }}</textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                                <div class="col-md-6">
-                                    <div class="form-group ">
-                                        <label class="control-label">Nội dung tiếng Hàn</label>
-                                        <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_kr">{{ $rows->content_kr }}</textarea>
-                                        <div class="has-danger">
-                                            <small class="form-control-feedback ">
-                                                Không để trống.
-                                            </small>
-                                        </div>
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label class="control-label">Nội dung tiếng Trung</label>
+                                    <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_cn">{{$rows->content_cn}}</textarea>
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="formFile" class="form-label">Chọn hình (Có thể chọn nhiều hình)</label>
-                                <input type="file" class="form-control ckeditor" name="photo[]" multiple  data-default-file="{{ $rows->photo }}">
+
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label class="control-label">Nội dung tiếng Hàn</label>
+                                    <textarea style="height: 150px" type="text" class="form-control ckeditor" placeholder="Nhập Nội dung" name="content_kr">{{$rows->content_kr}}</textarea>
+                                    <div class="has-danger">
+                                        <small class="form-control-feedback ">
+                                            Không để trống.
+                                        </small>
+                                    </div>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-success m-t-20">
-                                <i class="fa fa-envelope-o"></i> Thêm mới
-                            </button>
-                            <button class="btn btn-inverse m-t-20">
-                                <i class="fa fa-times"></i>Hủy
-                            </button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Chọn Lại hình (Có thể chọn nhiều hình) </label>
+                            <input type="file" class="form-control" name="photo[]"  multiple  data-default-file="{{ $rows->photo }}" >
+                            Hình cũ : {{ $rows->photo }}
+                        </div>
+                        <button type="submit" class="btn btn-success m-t-20">
+                            <i class="fa fa-envelope-o"></i> Thêm mới
+                        </button>
+                        <a href="/admin/room" class="btn btn-inverse m-t-20">
+                            <i class="fa fa-times"></i>Hủy
+                        </a>
                         </form>
                     </div>
                 </div>

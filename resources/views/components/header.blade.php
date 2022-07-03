@@ -43,11 +43,29 @@
                             <li  class="">
                                 <a>{{ __('messages.SERVICES AND FACILITIES') }}</a>
                                 <ul class="nav-child">
-                                            <li><a href="/poseidon-service/quay-dich-vu-van-phong{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">{{ __('sevice5.title') }}</a></li>
-                                            <li><a href="/poseidon-service/gym{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">{{ __('sevice2.title') }}</a></li>
-                                            <li><a href="/poseidon-service/dich-vu-cho-thue-xe{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">{{ __('sevice1.title') }}</a></li>
-                                            <li><a href="/poseidon-service/ho-boi-ngoai-troi{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">{{ __('sevice3.title') }}</a></li>
-                                            <li><a href="/poseidon-service/hoi-nghi{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}">{{ __('sevice4.title') }}</a></li>
+                                @foreach($dichvu as $row)
+                                    <li><a href="/poseidon-service/{{$row->slug}}{{ session()->get('locale') == '' ? '' : '?lang='.session()->get('locale') }}" >
+                                    @switch(session()->get('locale'))
+                                            @case('vi')
+                                            {!! $row->title_vi !!}
+                                            @break
+                                            @case('ru')
+                                            {!! $row->title_ru !!}
+                                            @break
+                                            @case('ja')
+                                            {!! $row->title_jp !!}
+                                            @break
+                                            @case('zh')
+                                            {!! $row->title_cn !!}
+                                            @break
+                                            @case('ko')
+                                            {!! $row->title_kr !!}
+                                            @break
+                                            @default
+                                            {!! $row->title_en !!}
+                                            @break
+                                            @endswitch</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li>

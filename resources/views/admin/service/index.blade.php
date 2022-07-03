@@ -14,7 +14,7 @@
             </ol>
         </div>
         <div class="col-md-7 align-self-center">
-            <a href="/admin/room/add" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down text-white">Thêm loại phòng</a>
+            <a href="/admin/service/add" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down text-white">Thêm dịch vụ</a>
         </div>
     </div>
     <!-- ============================================================== -->

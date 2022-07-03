@@ -11,10 +11,10 @@
     <meta name="description"
         content="AdminWrap Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>AdminWrap Lite Template by WrapPixel</title>
+    <title>Admin Poseidon</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/adminwrap-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon.ico')}}">
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('quantri/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('quantri/css/perfect-scrollbar.css') }}" rel="stylesheet">

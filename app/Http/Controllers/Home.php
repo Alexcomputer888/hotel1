@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Introduce;
 use App\Models\Room;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -38,6 +39,16 @@ class Home extends Controller
         App::setLocale($request->lang);
         session()->put('locale', $request->lang);
         return view('pages.room.room', compact('rows'));
+    }
+    public function GotoService(Request $request,$slug)
+    {
+        $id = Service::where('id', $slug)
+        ->orWhere('slug', $slug)
+        ->firstOrFail();
+        $rows= Service::find($id->id);
+        App::setLocale($request->lang);
+        session()->put('locale', $request->lang);
+        return view('pages.poseidon-service.service', compact('rows'));
     }
     
     public function contact(Request $request)
