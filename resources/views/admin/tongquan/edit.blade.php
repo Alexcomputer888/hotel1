@@ -13,11 +13,6 @@
                     <li class="breadcrumb-item active">Table Basic</li>
                 </ol>
             </div>
-            <div class="col-md-7 align-self-center">
-                <a href="https://www.wrappixel.com/templates/adminwrap/"
-                    class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down text-white"> Upgrade to
-                    Pro</a>
-            </div>
         </div>
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->

@@ -152,13 +152,15 @@
                         <li> <a class="waves-effect waves-dark" href="/admin/service" aria-expanded="false"><i
                                     class="fa fa-smile-o"></i><span class="hide-menu">Dịch Vụ</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i
+                        {{-- <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i
                                     class="fa fa-globe"></i><span class="hide-menu">Ẩm thực</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i
                                     class="fa fa-bookmark-o"></i><span class="hide-menu">Khám phá</span></a>
+                        </li> --}}
+                        <li> <a class="waves-effect waves-dark" href="/admin/support" aria-expanded="false"><i
+                            class="fa fa-user-circle-o"></i><span class="hide-menu">Hỗ trợ</span></a>
                         </li>
-                     
                     </ul>
                 
                 </nav>

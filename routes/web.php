@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\SupportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,13 @@ Route::group(['middleware' => ['auth'],'prefix' => 'admin'], function() {
     Route::post('service/add', [AdminController::class, 'storeservice'])->name('service.add');
     Route::get('service/edit/{id}', [AdminController::class, 'editservice']);
     Route::post('service/edit/{id}', [AdminController::class, 'updateservice'])->name('service.update');
+    Route::get('support', [SupportController::class, 'indexsupport']);
+    Route::get('support/add', [SupportController::class, 'getaddsupport']); 
+    Route::get('support/del/{id}', [SupportController::class, 'delsupport']);
+    Route::post('support/add', [SupportController::class, 'storesupport'])->name('support.add');
+    Route::get('support/edit/{id}', [SupportController::class, 'editsupport']);
+    Route::post('support/edit/{id}', [SupportController::class, 'updatesupport'])->name('support.update');
+    
  });
  Route::get('admin/login', [LoginController::class, 'showLoginForm'])->name('login');
  Route::post('admin/login', [LoginController::class, 'login']);
